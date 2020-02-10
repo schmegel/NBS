@@ -1,0 +1,4 @@
+select i.cod_fiscal_item, i.*, rowid
+from itens_custos i
+where i.cod_item = '07086592'
+and cod_fiscal_item is null
