@@ -1,0 +1,5 @@
+select v.status, v.*, rowid 
+from vendas v 
+where cod_empresa = 61 
+and controle in (695, 690)
+/** 0 Autorizada 1 Cancelada**/
