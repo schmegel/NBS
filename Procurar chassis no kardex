@@ -1,0 +1,9 @@
+select v.status, v.* from veiculos v
+where v.chassi_completo = '';
+
+select * from veic_kardex vk
+where vk.chassi_completo = '';
+
+
+select vk.*, rowid from Veiculos_inventario vk
+where vk.chassi_completo = '';
