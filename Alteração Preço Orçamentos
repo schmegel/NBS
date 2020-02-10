@@ -1,0 +1,10 @@
+select t.preco_venda, t.*,rowid from OS_ORCAMENTOS_ITENS t
+where t.cod_item = '9410914000'
+and   t.cod_fornecedor = 2;
+
+
+update OS_ORCAMENTOS_ITENS
+set preco_venda = '6.30'
+where cod_item = '9410914000'
+and cod_fornecedor = '2'
+and preco_venda = '2.55'
