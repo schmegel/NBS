@@ -1,0 +1,5 @@
+select v.emissao,  v.*, rowid 
+from vendas v 
+where cod_empresa = 61 
+and controle in (1256, 1257) 
+and serie = 'A1'
