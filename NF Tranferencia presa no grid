@@ -1,0 +1,1 @@
+select c.transferencia, c.transf_venda_cod_empresa, c.transf_venda_controle, c.transf_venda_serie, rowid from compra c where c.cod_controle = and c.cod_empresa =
