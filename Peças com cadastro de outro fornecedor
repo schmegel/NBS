@@ -1,0 +1,19 @@
+/*select * from fornecedor_estoque_empresa f
+where f.cod_empresa=7
+;
+select * from fornecedor_estoque fe
+where fe.cod_empresa=1;*/
+
+/* alterar o fornecedo do item antes*/
+
+select t.*, t.rowid from ITENS_FORNECEDOR t
+where t.cod_item = '52062435'
+
+
+
+SELECT I.COD_FISCAL_ITEM, I.*, ROWID FROM ITENS_CUSTOS I WHERE I.COD_ITEM = '52062435'
+
+
+/* alterar na OS o fornecedor, necessario ter adicionado na tabela ITENS_FORNECEDOR o fornecedor correto*/
+
+select * from OS_REQUISICOES where cod_empresa = 2 and numero_os = 29996 for update
