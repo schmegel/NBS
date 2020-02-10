@@ -1,0 +1,10 @@
+select * from SERVICOS_PREFEITURA 
+where cod_empresa = 61 
+and cod_servico like 'REV.60 C4%';
+
+select * from SERVICOS 
+WHERE cod_servico like 'REV.60 C4%';
+
+insert into SERVICOS_PREFEITURA (COD_SERVICO, COD_SERVICO_PREFEITURA, COD_EMPRESA)
+values ('REV.60 C4 L PIT', '11767', 61)
+/**(Codigo Serviço, IDCnae, Numero Loja)**/  
