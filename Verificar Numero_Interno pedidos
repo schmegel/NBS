@@ -1,0 +1,3 @@
+select p.numero_interno,
+ p.* from PEDIDOS_ITENS p 
+ where cod_item in ('51842293', '52004316')
