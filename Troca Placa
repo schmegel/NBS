@@ -1,0 +1,3 @@
+Select v.placa_usado, v.*, rowid 
+from veiculos v 
+where Placa_usado = '
