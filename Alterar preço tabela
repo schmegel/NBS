@@ -1,0 +1,5 @@
+SELECT v.preco_tabela, v.*, rowid from veiculos v
+ where cod_empresa = 43
+   and cod_produto = 38
+   and cod_modelo = 17487
+   and chassi_resumido = 140169
