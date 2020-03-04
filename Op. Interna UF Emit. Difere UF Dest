@@ -1,0 +1,8 @@
+-- Operação interna e UF do emitente difere da UF do destinatario/remetente
+
+select v.frete_conta, v.*, rowid  
+from vendas v 
+where cod_empresa = 4 
+and controle in (41789, 41766)
+
+-- Frete não pode ser por conta (4), deve ser sem ocorrencia de frete (9)
