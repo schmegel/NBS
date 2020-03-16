@@ -8,3 +8,11 @@ WHERE cod_servico like 'REV.60 C4%';
 insert into SERVICOS_PREFEITURA (COD_SERVICO, COD_SERVICO_PREFEITURA, COD_EMPRESA)
 values ('REV.60 C4 L PIT', '11767', 61)
 /**(Codigo Serviço, IDCnae, Numero Loja)**/  
+
+
+/** Se falhar pela data e hora da Emissão**/
+select v.emissao,  v.*, rowid 
+from vendas v 
+where cod_empresa = 61 
+and controle in (1256, 1257) 
+and serie = 'A1'
