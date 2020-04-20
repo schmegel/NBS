@@ -1,0 +1,9 @@
+/*  situação tributaria, CST informado e não informado codigo de beneficio fiscal
+  No tabelas verificar o codigo da natureza operação
+*/
+Select situacao_tributaria,cod_operacao_fiscal,cod_tributacao,cod_natureza,grupo, vi.*,rowid
+from venda_Itens vi
+where controle in (701530  )
+and serie  = '03'
+or (cod_empresa = 2 and data > = '01/01/2020'
+and cod_item = '93373032')
