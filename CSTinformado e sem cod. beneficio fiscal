@@ -1,5 +1,5 @@
 /*  situação tributaria, CST informado e não informado codigo de beneficio fiscal
-  No tabelas verificar o codigo da natureza operação
+  No tabelas verificar o codigo da natureza operação, deve ser corigida Situação tributaria, cod operaçao, cod tributação e grupo
 */
 Select situacao_tributaria,cod_operacao_fiscal,cod_tributacao,cod_natureza,grupo, vi.*,rowid
 from venda_Itens vi
