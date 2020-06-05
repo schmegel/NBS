@@ -1,0 +1,4 @@
+update os_tipos_empresas 
+set VALOR_HORA = 95, VALOR_HORA_EXTENDIDA = 95
+ where cod_empresa in (21, 22, 25,26,27,28,31,32,33) 
+ and valor_hora = 85 
