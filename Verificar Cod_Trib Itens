@@ -1,0 +1,3 @@
+select ci.cod_tributacao, ci.*, rowid 
+from itens ci 
+where cod_item in ('7091135', '7091141', '7091139', '7091137', '7041136', '7091142')
