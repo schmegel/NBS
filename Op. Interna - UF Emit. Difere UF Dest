@@ -6,3 +6,17 @@ where cod_empresa = 4
 and controle in (41789, 41766)
 
 -- Frete não pode ser por conta (4), deve ser sem ocorrencia de frete (9)
+
+
+------------------------------------------
+Devolução
+
+select * from compra
+where cod_controle= 411876 for update
+
+--Mudar no compras o CFOP para CFOP de devolução InterEstadual
+
+select * from compras_itens
+where cod_controle= 411876 for update
+
+--Mudar no compras items o CFOP para CFOP de devolução InterEstadual
