@@ -11,12 +11,12 @@ and controle in (41789, 41766)
 ------------------------------------------
 Devolução
 
-select * from compra
-where cod_controle= 411876 for update
+select c.cod_natureza3, c.*, rowid from compra c
+where cod_empresa = 1 and cod_controle in (411957 , 411959);
 
 --Mudar no compras o CFOP para CFOP de devolução InterEstadual
 
-select * from compras_itens
-where cod_controle= 411876 for update
+select c.cod_natureza, c.*, rowid from compras_itens c
+where cod_empresa = 1 and cod_controle in (411957 , 411959);
 
 --Mudar no compras items o CFOP para CFOP de devolução InterEstadual
