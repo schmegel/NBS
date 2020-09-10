@@ -1,0 +1,15 @@
+select *  from cartao_credito
+where cod_empresa = 61
+and cod_cartao_credito between 76 and 85;
+
+create table ccredito as select *  from cartao_credito
+where cod_empresa = 61
+and cod_cartao_credito between 76 and 85;
+
+select * from ccredito1 for update;
+
+--Alterar cod_empresa para a cópia - Apagar cod_conta_corrente, cod_emp_cta_corrente, cod_grupo_cartao
+
+insert into cartao_credito select *  from ccredito;
+
+--Alterar manual no sisfin conta corrente e grupo de cartao
