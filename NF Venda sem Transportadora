@@ -1,0 +1,2 @@
+Select v.cod_transportadora, v.frete_conta, v.*, rowid from vendas v where v.cod_empresa = 1 and v.cod_operacao = 17  
+and v.controle in (377400, 315882)
