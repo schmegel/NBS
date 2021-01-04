@@ -1,0 +1,5 @@
+SELECT F.STATUS,F.COD_EVENTO,F.*,ROWID FROM FU_USADOS F
+WHERE F.COD_AVALIACAO = 628879
+
+--Alterar status para 2.
+--Quando veiculo semi novo (avaliação) foi vendido antes de ser realizada a venda direta
