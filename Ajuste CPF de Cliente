@@ -1,0 +1,2 @@
+select  c.cpf, c.*, rowid from dados_fisicos c 
+where c.cod_cliente = '00325977038'
