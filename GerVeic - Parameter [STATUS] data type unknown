@@ -1,0 +1,7 @@
+--Verificar no evento do CRM Gold o numero da avaliação de seminovo
+
+SELECT F.STATUS,F.COD_EVENTO,F.*,ROWID FROM FU_USADOS F
+WHERE F.COD_AVALIACAO = 628879
+
+--Alterar status para 2
+--Isso acontece geralmente quando é vendido o semi novo antes de se finalizar a venda do evento.
