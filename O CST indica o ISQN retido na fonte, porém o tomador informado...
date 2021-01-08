@@ -1,4 +1,4 @@
-select  controle,
+select  controle, cst, cod_cst,
     base_iss,
     aliq_iss,
     valor_iss,
@@ -11,10 +11,6 @@ select  controle,
     v.*,rowid
 from vendas v
 where
-  controle in ()
-  and serie = ''
-  and cod_empresa = 
-  
-  --Caso cliente seja orgão publico e foi lançado nota como não sendo orgão publico copiar valores da base_iss,aliqu_iss,valor_iss e NovoValor para
-  -- a base_iss_retido,aliq_iss_sub, valor_iss_retido e valor_retido. O mesmo vale para quando não ser orgão publico e ser lançado como orgção publico, 
-  -- só inverter os valores
+  controle in (3775)
+  and serie = 'A1'
+  and cod_empresa = 27
