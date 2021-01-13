@@ -1,0 +1,4 @@
+select c.cod_midia, c.*, rowid from crm_eventos c
+where c.cod_evento = 
+
+--Alterar cod_midia para 15 (nao informado)
