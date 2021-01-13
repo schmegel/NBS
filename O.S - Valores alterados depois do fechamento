@@ -1,0 +1,26 @@
+--verifica valor bruto dos serviços na OS
+select os.valor_servicos_bruto, os.*, rowid from os
+where cod_empresa = 1 and numero_os = 347900;
+
+---select dos serviços da OS
+select o.*, rowid from os_servicos o
+where cod_empresa = 1 and numero_os = 347900;
+
+
+---Select que traz o calculo do valor total bruto da nota;
+SELECT 
+ SUM(preco_venda + NVL(adi_preco,0)) as soma_servico
+FROM os_servicos,
+     (SELECT cod_servico, item,
+        SUM(preco_venda) as adi_preco
+      FROM os_servicos_adicionais
+      WHERE cod_empresa = 1
+       AND numero_os = 347900
+      GROUP BY item, cod_servico) adi
+WHERE os_servicos.cod_servico = adi.cod_servico (+) 
+ AND os_servicos.item = adi.item (+) 
+ AND os_servicos.cod_empresa = 1
+ AND os_servicos.numero_os = 347900;
+ 
+---Ultimo select tem que ter o mesmo valor que o valor_servicos_bruto da tabela os.
+---Se nao tiver pode ajustar direto no item na tabela os_servicos
