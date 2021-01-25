@@ -1,0 +1,12 @@
+select n.*, rowid from nfse_movimento n
+where data_recebimento > to_date('25/01/2021', 'dd/mm/yyyy');
+--anotar ultimo movimento, adicionar +1 
+
+select n.*, rowid from nfse_movimento n
+where id_empresa = 21
+and numero_rps > 15160
+--copiar uma linha anterior, apagar dados especificos
+
+select v.NFSE, v.*, rowid from vendas v
+where cod_empresa = 21 and controle = 15161
+--NFSE = S
