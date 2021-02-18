@@ -1,0 +1,7 @@
+select t.*, t.rowid from CIDADES t
+where descricao LIKE '%PEROLA%'
+
+----para remoção cep e ibge duplicados
+select t.*, t.rowid from BAIRROS t
+where t.cod_cidades = 6700
+and   t.uf = 'PR'
