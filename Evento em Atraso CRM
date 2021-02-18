@@ -1,0 +1,15 @@
+SELECT *
+        FROM   crm_eventos a,
+               crm_eventos_tipo b,
+               crm_grupo grupo
+        WHERE  a.cod_tipo_evento = b.cod_tipo_evento
+               AND b.cod_grupo = grupo.cod_grupo
+               AND Trunc(Nvl(a.data_novo_contato, a.data_evento)) < Trunc(SYSDATE)
+               AND a.cod_empresa IN (SELECT a.cod_empresa
+                                     FROM   empresas a,
+                                            crm_empresa_funcao b
+                                     WHERE                                              b.cod_funcao = 157)
+               AND ( ( a.responsavel_pelo_evento = 'ALEXANDRE' )
+                     OR ( ( a.vendedor_preferencia = 'ALEXANDRE' )
+                          AND ( a .responsavel_pelo_evento IS NULL ) ) )
+               AND a.status = 'P'
