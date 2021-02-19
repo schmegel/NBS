@@ -1,4 +1,10 @@
 select c.cod_midia, c.*, rowid from crm_eventos c
-where c.cod_evento = 
+where c.cod_evento = '';
 
 --Alterar cod_midia para 15 (nao informado)
+
+
+---Erro status 
+--Corrigir status avaliação no FU_USADOS = 2
+select v.status, v.*, rowid from fu_usados v
+where v.cod_evento = ''
