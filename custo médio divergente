@@ -4,25 +4,24 @@
 
 SELECT ic.cod_item, ic.custo_ultima_entrada, ic.custo_contabil, ic.custo_fornecedor, ic.*, rowid 
 FROM itens_custos ic
-where ic.cod_item ='PILHA';
+where ic.cod_item ='%CODIGO_ITEM';
 ---------------------------------------------------------      
 select t.custo_fornecedor, t.custo_contabil, t.*, t.rowid 
 from ITENS_FORNECEDOR t
-where t.cod_item = 'PILHA';
+where t.cod_item = '%CODIGO_ITEM';
 ---------------------------------------------------------   
 select t.custo_medio, t.custo_medio_anterior, t.*, t.rowid 
 from ITENS_HISTORICO t
-where t.cod_item = 'PILHA';
+where t.cod_item = '%CODIGO_ITEM';
 ---------------------------------------------------------   
 select t.preco_contabil, t.custo_medio_resultante, t.custo_contabil2, t.*, t.rowid 
 from Compras_itens t
-where t.cod_item = 'PILHA';
+where t.cod_item = '%CODIGO_ITEM';
 ---------------------------------------------------------   
 select t.custo_anterior, t.custo_operacao, t.custo_resultante, t.*, t.rowid 
 from cardex_contabil t
-where t.cod_item = 'PILHA';
+where t.cod_item = '%CODIGO_ITEM';
 
 
 
-trg
-tgCardex_Contabil
+--trg tgCardex_Contabil
