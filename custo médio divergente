@@ -1,10 +1,6 @@
-/** select i.custo_fornecedor, i.custo_contabil, rowid from itens_fornecedor  i
- where cod_item = '76630T7TM11' 
- and cod_fornecedor = 2 **/
-
 SELECT ic.cod_item, ic.custo_ultima_entrada, ic.custo_contabil, ic.custo_fornecedor, ic.*, rowid 
 FROM itens_custos ic
-where ic.cod_item ='&CODIGO_ITEM';
+where ic.cod_item = '&CODIGO_ITEM';
 ---------------------------------------------------------      
 select t.custo_fornecedor, t.custo_contabil, t.*, t.rowid 
 from ITENS_FORNECEDOR t
