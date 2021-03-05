@@ -1,0 +1,6 @@
+update crm_eventos c
+set c.cod_midia = 15
+where c.cod_evento = &cod_evento;
+commit;
+select c.cod_midia, c.* from crm_eventos c
+where cod_evento = &cod_evento
