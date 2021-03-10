@@ -1,0 +1,3 @@
+select os.tempo_pago, os.*, rowid from os_tempos_executados os 
+where cod_tecnico = 191 
+--and os.tempo_pago > 500
