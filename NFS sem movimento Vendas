@@ -1,12 +1,12 @@
-select n.*, rowid from nfse_movimento n
-where data_recebimento > to_date('25/01/2021', 'dd/mm/yyyy');
+select MAX(n.ID_MOVIMENTO)from nfse_movimento n
+where data_recebimento > to_date(sysdate);
 --anotar ultimo movimento, adicionar +1 
 
 select n.*, rowid from nfse_movimento n
-where id_empresa = 21
-and numero_rps > 15160
---copiar uma linha anterior, apagar dados especificos
+where id_empresa = &empresa
+and numero_rps > &rps;
+--copiar uma linha anterior, apagar dados especificos da NF antiga
 
 select v.NFSE, v.*, rowid from vendas v
-where cod_empresa = 21 and controle = 15161
+where cod_empresa = &empresa and controle = &rps;
 --NFSE = S
