@@ -1,4 +1,4 @@
-*/O CST indica o ISQN retido na fonte, porém o tomador informado.../*
+/*O CST indica o ISQN retido na fonte, porém o tomador informado...*/
 
 select  controle, cst, cod_cst,
     base_iss,
