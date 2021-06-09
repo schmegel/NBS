@@ -1,0 +1,6 @@
+select os.como_cobrar, os.*, rowid from os_servicos os 
+where cod_empresa = &empresa and numero_os &nmr_os;
+--mudar o como cobrar para Z
+
+select os.*, rowid from servicos os where cod_servico = "&cod_serviço"
+Verificar se esta como Z o como cobrar do serviço
