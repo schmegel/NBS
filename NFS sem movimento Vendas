@@ -1,3 +1,10 @@
+/* Primeiro verificar na fila se não esta parado a NF */
+select * from nfse_fila
+
+/*Se tiver uma NF com status de erro por restrição de chave, ir no NFSeService no servidor de notas e reenviar pelo menu
+ulititarios > Consultar Fila 
+Se não tiver nota com erro deve fazer procedimento abaixo.*/
+
 select MAX(n.ID_MOVIMENTO)from nfse_movimento n
 where data_recebimento > to_date(sysdate);
 --anotar ultimo movimento, adicionar +1 
