@@ -1,15 +1,15 @@
-*/Quando for devolução mesmo/*
-*/CFOP de devolucao de mercadoria para NF-e que nao tem finalidade de devolucao de mercadoria*/
-select fin_nfe, fin_nfe3, c.eh_devolucao, rowid from compra c where cod_controle = 383063;          
+/*Quando for devolução mesmo
+CFOP de devolucao de mercadoria para NF-e que nao tem finalidade de devolucao de mercadoria*/
+select fin_nfe, fin_nfe3, c.eh_devolucao, rowid from compra c where cod_controle = 507125;          
 --mudar fin_nfe = 4, fin_nfe3 = 4 e c;eh_devolucao = S
 
-select m.status_nfe, m.*,rowid from nfe_movimento m where m.numr_controle = 383063 
+select m.status_nfe, m.*,rowid from nfe_movimento m where m.numr_controle = 507125 
 --Mudar status para 1 e reenviar
 
 
-*/ Quando não for devolução e estiver com o CFOP Incorreto:*/
+/* Quando não for devolução e estiver com o CFOP Incorreto:*/
 select c.cod_natureza3, c.nat_op, c.*, rowid from compra c
-where cod_empresa = 61 and cod_controle in (485505);
+where cod_empresa = 61 and cod_controle in (507125);
 
 select ci.cod_natureza, ci.*, rowid from compras_itens ci
-where cod_empresa = 61 and cod_controle in (485505)
+where cod_empresa = 61 and cod_controle in (507125)
