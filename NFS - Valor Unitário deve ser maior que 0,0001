@@ -1,3 +1,12 @@
+------------------------------
+update os_servicos set como_cobrar = 'Z' 
+where cod_empresa = 61 and preco_venda = 0
+and numero_os in (select v.numero_os from vendas v
+where v.cod_empresa = 61 and v.controle in ( 8274,8277,8280) 
+and serie = 'A1');
+----------------------------------
+
+
 select os.como_cobrar, os.*, rowid from os_servicos os 
 where cod_empresa = &empresa and numero_os = &nmr_os;
 --mudar o como cobrar para Z
