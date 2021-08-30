@@ -1,0 +1,6 @@
+select t.troco_nao_financeiro, t.*, rowid from PAGAMENTO_VENDA t
+where t.cod_empresa = 1
+and   t.serie = '1'
+and   t.controle = 398824
+
+/*Mudar troco não financeiro para N*/
