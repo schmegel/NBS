@@ -1,0 +1,11 @@
+/*Rejeição: Contranota de Produtor sem Nota Fiscal referenciada*/
+
+
+select t.*, rowid from COMPRA_DOC_REF t
+where t.cod_empresa in (2, 7)
+and   t.cod_controle in (504708, 537127);
+
+/* usa os mesmos dados da nota que está tentando validar
+COD_EMPRESA, COD_CONTROLE, TIPO_DOC_REF, ANO_MES_EMIT, UF_EMIT, CNPJ_EMIT, MOD_DOC_EMIT, NUMERO_DOC_EMIT, SERIE_EMIT, SEQ_DIC_REF
+EX: 7, 537127, 3(sempre), 2109(mes+ano), RS, 2266596000797(CNPJ Empresa emitente da NF), 04 (sempre), 47937 (Numero nf que vai validar), 1(serie NF que vai validar), 1 (numero da sequencia de nota, geralmente 1)
+*/
