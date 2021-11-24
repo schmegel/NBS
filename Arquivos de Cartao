@@ -1,0 +1,4 @@
+select t.*, rowid from RETORNO_BCO_CARTAO_DETALHE t
+where t.nr_estabelecimento = 1068037986;
+
+select n.*, rowid from RETORNO_BCO_CARTAO n where n.nr_estabelecimento = 1068037986;
