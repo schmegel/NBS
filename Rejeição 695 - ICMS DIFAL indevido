@@ -1,0 +1,18 @@
+select bc_icms_uf_dest, --APAGA
+aliq_fcp_uf_dest,
+aliq_icms_uf_dest, --APAGA
+bc_icms_inter, --APAGA
+aliq_icms_inter, --APAGA
+valor_icms_inter, --APAGA
+perc_icms_uf_dest, --APAGA
+valor_fcp_uf_dest, 
+valor_icms_difal,
+valor_icms_partilha_uf_dest,
+valor_icms_partilha_uf_remet,
+inf_complementar from vendas
+where controle=23030 and cod_empresa= 61 for update
+
+
+
+select * from nfe_movimento
+where numr_controle=23030 and id_empresa= 61 for update
