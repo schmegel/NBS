@@ -1,8 +1,2 @@
 select ve.cod_origem, ve.*, rowid from veiculos ve where chassi_resumido = 140958;
 --cod_origem = F
-
-select v.cst_origem, v.*, rowid from vendas  v where cod_empresa = 6 and controle = 16422;
---CST_ORIGEM = 0
-
-select n.STATUS_NFE, n.*, rowid from NFE_MOVIMENTO N where ID_EMPRESA = 6 and NUMR_CONTROLE = 16422;
---Status_NFE = 0 - Reenviar
