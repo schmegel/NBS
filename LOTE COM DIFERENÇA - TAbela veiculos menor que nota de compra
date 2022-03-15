@@ -1,0 +1,22 @@
+/* LOTE COM DIFERENÇA - TAbela veiculos menor que nota de compra */
+
+
+update veiculos v set total_nota_fabrica = (total_nota_fabrica + 1219.80)
+where v.cod_empresa = 4
+and v.cod_controle_compra in (580051,
+580064,
+580078,
+580057,
+580445,
+580443,
+580456,
+580462,
+580452,
+580448,
+580465,
+580063,
+580076,
+580080,
+580083,
+580441,
+580451)
