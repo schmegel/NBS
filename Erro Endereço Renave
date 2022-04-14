@@ -1,0 +1,24 @@
+ Select Vendas.End_Cep ,Vendas.End_Cid_Uf ,vendas.end_rua ,Length(vendas.end_rua) As TamanhoDoend_rua ,vendas.end_bairro ,
+ Length(vendas.end_bairro) As TamanhoDoend_bairro ,vendas.end_complemento ,Length(vendas.end_complemento) As TamanhoDoend_complemento ,vendas.end_fachada
+ ,Length(vendas.end_fachada) As TamanhoDoend_fachada ,Rowid From Vendas Where COD_EMPRESA = &CodigoDaEmpresa And SERIE = &SerieDaNota And CONTROLE = 
+  &NumeroDaNotaDeVenda;
+  
+  
+   Corrigir erro referente ao endereço enviado para o RENAVE: 
+   01 - Acessar NFVENDAS 
+   02 - Limpar todos os filtros deixando apenas o chassi completo preenchido e pesquisar 
+   03 - Anotar: 
+   03.01 - Código da empresa 03.02 - Série da nota 03.03 - Número da nota 
+   04 -  Executar a consulta abaixo no PL/SQL Developer informando os dados anotados acima nos parâmetros: -- 
+ Corrigir o endereço do RENAVE caso dê algum erro (Localizar a nota em NFVENDAS filtrando pelo chassi completo): 
+ 
+ Select Vendas.End_Cep ,Vendas.End_Cid_Uf ,vendas.end_rua ,Length(vendas.end_rua) As TamanhoDoend_rua ,vendas.end_bairro ,
+ Length(vendas.end_bairro) As TamanhoDoend_bairro ,vendas.end_complemento ,Length(vendas.end_complemento) As TamanhoDoend_complemento ,vendas.end_fachada
+ ,Length(vendas.end_fachada) As TamanhoDoend_fachada ,Rowid From Vendas Where COD_EMPRESA = &CodigoDaEmpresa And SERIE = &SerieDaNota And CONTROLE = 
+  &NumeroDaNotaDeVenda;
+  
+   05 - Corrigir o endereço e salvar os dados (Commit) 
+  
+  
+  06 - Refazer o processo no GER_VEIC no formulário do RENAVE. 
+  
