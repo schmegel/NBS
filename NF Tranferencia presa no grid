@@ -6,7 +6,7 @@ and c.cod_empresa = &cod_empresa
 
 /* 
 transferencia = S
-transf_venda_cod_empresa = empresa saida transferencia;
-transf_venda_controle = numero NF saida trasnferencia;
-transf_venda_serie = serie NF saida trasnferencia;
+transf_venda_cod_empresa = empresa saida transferencia
+transf_venda_controle = numero NF saida trasnferencia
+transf_venda_serie = serie NF saida trasnferencia
 */
