@@ -1,2 +1,2 @@
 select n.status, n.codg_verificacao, n.*, rowid from nfse_movimento n where id_empresa = 46 and numero_rps in (2141, 2140) ;
----Status 10, codg_verificacao pegar no xml
+---Status 10, codg_verificacao pegar no xml ou imprimir a nota e peegar a chave de acesso na nota 
